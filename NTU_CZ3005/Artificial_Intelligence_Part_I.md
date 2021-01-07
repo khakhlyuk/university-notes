@@ -235,7 +235,7 @@ growth of the search tree.
 	- Non-negative
 	- If *n* is a goal node, then *h(n) = 0*.
 	- Depends only on the state at that node.
-	- Additional knowledge of the problem is imparted to the search algorithm.
+	- Additional knowledge of the problem is imported to the search algorithm.
 - **Admissible Heuristic**
 	- ***h(n) &le; h&ast;(n)*** for all *n*.
 	- i.e. *h(n)* never overestimates the actual cost of a path through node *n* to the goal.
@@ -263,7 +263,7 @@ growth of the search tree.
 	- Any optimal solution in the original problem is also a solution (non necessary optimal) for the relaxed problem.
 
 ### Best First Search
-- A generic Informed Search algorithm (example are Greedy BFS, A*)
+- A generic Informed Search algorithm (example are GBFS, A*)
 - Expand most desirable unexpanded node.
 	- Use an evaluation function *f(n)* to estimate the cost of each node.
 	- Nodes are ordered so that the one with the lowest *f(n)* is expanded first.
@@ -275,7 +275,7 @@ growth of the search tree.
 	- Evaluation Function: *f(n) = h(n)*
 - Useful but potentially fallible.
 - Time: *O(b<sup>m</sup>)* (Worst Case)
-- Space: *O(b<sup>m</sup>)* (Worst Case)
+- Space: *O(bm)* (Worst Case)
 - Complete: No
 - Optimal: No
 - With a good heuristic function, the complexity can be reduced substantially.
@@ -348,7 +348,7 @@ added path first
 | UCS     | Y	| Y | Y | N | *O(b<sup>d</sup>)* | *O(b<sup>d</sup>)* |
 | DFS     | N	| N | N | N | *O(b<sup>m</sup>)* | *O(bm)*            |
 | **IDS** | Y	| Y | N | N | *O(b<sup>d</sup>)* | *O(bd)*            |
-| GS      | N	| N | Y | Y | *O(b<sup>d</sup>)* | *O(b<sup>d</sup>)* |
+| GBFS      | N	| N | Y | Y | *O(b<sup>d</sup>)* | *O(bm)* |
 | A*      | Y	| Y | Y | Y | *O(b<sup>d</sup>)* | *O(b<sup>d</sup>)* |
 | B&B     | N	| Y | Y | Y | *O(b<sup>m</sup>)* | *O(bm)*            |
 | **IDA***| Y	| Y | Y | Y | *O(b<sup>d</sup>)* | *O(bd)*            |
